@@ -1,8 +1,11 @@
 sudo: required
 
+notifications:
+          email: false
+
 before_install:
         - sudo apt-get -qq update
-        - sudo apt-get install -y libsystemd-dev
+        - sudo apt-get install -y libsystemd-daemon-dev
 
 language: erlang
 
