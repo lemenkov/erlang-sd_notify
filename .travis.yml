@@ -1,0 +1,7 @@
+before_install:
+        - wget https://github.com/rebar/rebar/wiki/rebar
+        - chmod u+x ./rebar
+language: erlang
+otp_release:
+        - 18.0
+script: "./rebar compile && ./rebar skip_deps=true eunit"
